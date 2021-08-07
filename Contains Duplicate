@@ -1,0 +1,22 @@
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        int f=1;
+        unordered_map<int ,int> m;
+        for(int i:nums)
+        {
+            m[i]++;
+        }
+        
+        for(int i:nums)
+        {
+            if(m[i]!=1)
+                f=0;
+        }
+        if(f==0)
+            return true;
+        else
+            return false;
+    }
+    
+};
