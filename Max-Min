@@ -1,6 +1,0 @@
-int Solution::solve(vector<int> &A) {
-    int k=A.size(),s=0;
-    sort(A.begin(),A.end());
-    s=A[0]+A[k-1];
-    return s;
-}
