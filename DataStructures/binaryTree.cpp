@@ -75,26 +75,6 @@ void LevelOrder(TreeNode* root)
     }
 }
 
-void LevelOrder(TreeNode* root)
-{
-    if (root == NULL) return;
-    queue<TreeNode*> q;
-    q.push(root);
-    int lvl = 0;
-    while (!q.empty()) {
-        TreeNode* node = q.front();
-        cout << node->val << " ";
-        q.pop();
-        if (node->left) q.push(node->left);
-        if (node->right) q.push(node->right);
-    }
-}
-
-
-
-
-
-
 int main() {
     TreeNode* rlsubTree = new TreeNode(3, NULL, NULL);
     TreeNode* rrsubTree = new TreeNode(5, NULL, NULL);
