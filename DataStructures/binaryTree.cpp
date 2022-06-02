@@ -38,10 +38,9 @@ void preorder(TreeNode *root) {
 
 void idfs(TreeNode* root) {
     if (root == nullptr) return;
-    
-    TreeNode* curr = root;
+
     stack<TreeNode*> st;
-    st.push(curr);
+    st.push(root);
 
     while (!st.empty())
     {
@@ -75,6 +74,26 @@ void LevelOrder(TreeNode* root)
         lvl++;
     }
 }
+
+void LevelOrder(TreeNode* root)
+{
+    if (root == NULL) return;
+    queue<TreeNode*> q;
+    q.push(root);
+    int lvl = 0;
+    while (!q.empty()) {
+        TreeNode* node = q.front();
+        cout << node->val << " ";
+        q.pop();
+        if (node->left) q.push(node->left);
+        if (node->right) q.push(node->right);
+    }
+}
+
+
+
+
+
 
 int main() {
     TreeNode* rlsubTree = new TreeNode(3, NULL, NULL);
