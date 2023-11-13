@@ -1,4 +1,10 @@
 .vscode
 .DS_Store
 a.out
-practice.cpp
+practice*.cpp
+pc*.cpp
+c.c
+check*.cpp
+contain.cpp
+*.py
+study.cpp
